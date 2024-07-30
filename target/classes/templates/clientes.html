@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de clientes</title>
+</head>
+<body>
+    <h1>Lista de clientes</h1>
+    <!-- Encabezado pag-->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Teléfono</th>
+                <th>Correo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+        <!-- Cuerpo de la tabla-->
+
+        <tbody>
+            <tr th:each="cliente : ${clientes}">
+                <td th:text="${cliente.id}"></td>
+                <td th:text="${cliente.nombre}"></td>
+                <td th:text="${cliente.telefono}"></td>
+                <td th:text="${cliente.correo}"></td>
+                <td>
+                    <a href="@{/clientes/editar/{id}(id=${cliente.id})}">Editar</a>
+                    <a href="@{/clientes/eliminar/{id}(id=${cliente.id})}">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="/clientes/nuevo">Registrar nuevo cliente</a>
+</body>
+</html>
