@@ -54,9 +54,6 @@ public class ClienteController {
                 model.addAttribute("cliente", cliente);
                 return  "editar-cliente";
 
-      /*  Cliente cliente = clienteRepository.findById(id).orElseThrow(() -> new RuntimeException("Cliente no Encontrado"));
-        model.addAttribute("cliente", cliente);
-        return "editar_cliente";  */
     }
 
     @PostMapping("/{id}")
