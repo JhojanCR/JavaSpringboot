@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elimina un usuario</title>
+    <link rel="stylesheet" href="info.css">
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Website</th>
+        <th>Teléfono</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="restaurantes : ${restaurantes}">
+        <td th:text="${restaurantes.id}"></td>
+        <td th:text="${restaurantes.nombre}"></td>
+        <td th:text="${restaurantes.correo}"></td>
+        <td th:text="${restaurantes.website}"></td>
+        <td th:text="${restaurantes.telefono}"></td>
+        <td>
+            <a href="@{/restaurantes/editar/{id}(id=${cliente.id})}">Modificar</a>
+            <a href="@{/restaurantes/eliminar/{id}(id=${cliente.id})}">Eliminar</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<a href="/restaurantes/nuevo">Registrar nuevo usuario</a>
+</body>
+</html>
