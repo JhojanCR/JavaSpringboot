@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Usuario</title>
+</head>
+<body>
+<h1>Modificar Usuario</h1>
+<form th:action="@{/restaurantes/{id}(id=${restaurante.id})}" th:object="${restaurante}" method="post">
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id" th:field="*{id}" readonly="readonly"/>
+    <br/>
+    <label for="nombreDelNegocio">Nombre del Negocio:</label>
+    <input type="text" id="nombreDelNegocio" name="nombreDelNegocio" th:field="*{nombreDelNegocio}"/>
+    <br/>
+    <label for="paginaWeb">Página Web:</label>
+    <input type="text" id="paginaWeb" name="paginaWeb" th:field="*{paginaWeb}"/>
+    <br/>
+    <label for="correo">Correo:</label>
+    <input type="text" id="correo" name="correo" th:field="*{correo}"/>
+    <br/>
+    <label for="telefono">Teléfono:</label>
+    <input type="text" id="telefono" name="telefono" th:field="*{telefono}"/>
+    <br/>
+    <button type="submit">Guardar Cambios</button>
+</form>
+<a href="/restaurantes">Regresar a la lista de restaurantes</a>
+</body>
+</html>

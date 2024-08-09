@@ -3,54 +3,62 @@ package com.apprestaurante.AppRestaurante.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-@Entity
 
+@Entity
 public class Restaurante {
+
+    @Id
     private Long id;
+
     private String nombreDelNegocio;
-    private String paginaWeb;
+    private String paginaWeb;  // Verifica que este nombre sea consistente
     private String correo;
     private String telefono;
 
-    @Id
-    public Long getId(){
-        return  id;
+    // Constructor por defecto (necesario para JPA)
+    public Restaurante() {
     }
 
-    public  void setId(Long id){
+    // Getters y setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getNombreDelNegocio(){
+    public String getNombreDelNegocio() {
         return nombreDelNegocio;
     }
 
-    public void setNombreDelNegocio(String nombreDelNegocio){
+    public void setNombreDelNegocio(String nombreDelNegocio) {
         this.nombreDelNegocio = nombreDelNegocio;
     }
 
-    public String getPaginaWeb(){
-        return  paginaWeb;
+    public String getPaginaWeb() {  // Asegúrate de que el nombre del método sea correcto
+        return paginaWeb;
     }
 
-    public void setPaginaWeb(String paginaWeb){
+    public void setPaginaWeb(String paginaWeb) {  // Asegúrate de que el tipo coincida
         this.paginaWeb = paginaWeb;
     }
 
-    public String getCorreo(){
-        return  correo;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setCorreo(String correo){
+    public void setCorreo(String correo) {
         this.correo = correo;
     }
 
-    public String getTelefono(){
-        return  telefono;
+    public String getTelefono() {
+        return telefono;
     }
 
-    public void setTelefono(String telefono){
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-
 }
+
+
