@@ -3,32 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elimina un usuario</title>
-    <link rel="stylesheet" href="info.css">
+    <title>Eliminar un usuario</title>
+    <link rel="stylesheet" href="/eliminar.css">
 </head>
 <body>
 <table>
     <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Correo</th>
-            <th>Website</th>
-            <th>Teléfono</th>
-        </tr>
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Website</th>
+        <th>Teléfono</th>
+    </tr>
     </thead>
     <tbody>
-        <tr th:each="restaurante : ${restaurantes}">
-            <td th:text="${restaurante.id}"></td>
-            <td th:text="${restaurante.nombre}"></td>
-            <td th:text="${restaurante.correo}"></td>
-            <td th:text="${restaurante.website}"></td>
-            <td th:text="${restaurante.telefono}"></td>
-            <td>
-                <a th:href="@{/restaurantes/modificar/{id}(id=${restaurante.id})}">Modificar</a>
-                <a th:href="@{/restaurantes/eliminar/{id}(id=${restaurante.id})}">Eliminar</a>
-            </td>
-        </tr>
+    <tr th:each="restaurante : ${restaurantes}">
+        <td th:text="${restaurante.id}"></td>
+        <td th:text="${restaurante.nombre}"></td>
+        <td th:text="${restaurante.correo}"></td>
+        <td th:text="${restaurante.website}"></td>
+        <td th:text="${restaurante.telefono}"></td>
+        <td>
+            <a th:href="@{/restaurantes/modificar/{id}(id=${restaurante.id})}">Modificar</a>
+            <a th:href="@{/restaurantes/eliminar/{id}(id=${restaurante.id})}">Eliminar</a>
+        </td>
+    </tr>
     </tbody>
 </table>
 <a href="/restaurantes/nuevo">Registrar nuevo usuario</a>

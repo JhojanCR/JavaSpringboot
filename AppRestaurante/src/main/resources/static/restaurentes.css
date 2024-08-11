@@ -1,0 +1,110 @@
+/* src/main/resources/static/restaurentes.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+    padding: 0 0;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .logo h4 {
+    color: #f4f4f4;
+    text-shadow: 2px 2px 2px gray;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 20px 0;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+table a:hover {
+    color: #20a36d;
+    cursor: pointer;
+}
+
+tbody:hover{
+    cursor: pointer;
+    background-color: rgb(183, 190, 183);
+}
+
+.regresar {
+    text-align: center;
+    margin: 20px 0;
+    height: 110px;
+}
+
+.regresar a {
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.regresar a:hover {
+    background-color: #20a36d;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 29px;
+    text-align: center;
+}
+
+body{
+    min-height: 100dvb;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
